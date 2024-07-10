@@ -1,5 +1,5 @@
-import { Component } from '@angular/core';
-
+import { Component, Input } from '@angular/core';
+import { product } from 'src/app/models/product';
 @Component({
   selector: 'app-product-list',
   templateUrl: './product-list.component.html',
@@ -532,4 +532,18 @@ export class ProductListComponent {
       slug: "michael-feburary-sk8-hi"
     }
   ];
-}
+  selectedProduct : product;
+  totalProductCount = this.products.length
+  totalProductInStock = this.products.filter(p=>p.is_in_inventory === true).length  
+  totalOutOfStock = this.products.filter(p=>p.is_in_inventory !== true).length
+  selectedFilterRadioButton : string = 'all';
+
+  @Input()
+  searchText : string = '';
+
+
+
+  onFilterChanged(event:string){
+    this.selectedFilterRadioButton = event;
+  }
+} 

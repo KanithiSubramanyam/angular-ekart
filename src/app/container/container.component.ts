@@ -8,5 +8,10 @@ import { Component } from '@angular/core';
 
 export class ContainerComponent {
   listOfString = ['Apple', 'Banana', 'Orange'];
+  searchText:string = '';
+
+  setSearchText(event:string){
+    this.searchText=event
+  }
 }
 
