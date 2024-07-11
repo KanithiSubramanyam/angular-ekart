@@ -23,7 +23,7 @@ export class SearchComponent {
     @ViewChild('searchInput', {static:true}) searchInputEl : ElementRef;
   
   onSearchTextChanged(){
-    // this.searchTextChanged.emit(this.searchText)
+    //  this.searchTextChanged.emit(this.searchText)
   }
 
   // updateSearch(event:any){

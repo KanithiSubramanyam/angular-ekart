@@ -18,6 +18,6 @@
             <p>Current elememt of array is {{ listOfString}}</p>
         </div> -->
         <app-product-list [searchText]="searchText" #productListComponent></app-product-list>
-        <product-detail *ngIf="productListComponent.selectedProduct"></product-detail>
+        <app-product-detail *ngIf="productListComponent.selectedProduct"  [productListComp] = 'productListComponent'></app-product-detail>
 </div>
  

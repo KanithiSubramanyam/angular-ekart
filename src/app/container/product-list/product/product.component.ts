@@ -1,5 +1,5 @@
 import { Component, Input } from '@angular/core';
-import { product } from 'src/app/models/product';
+import { Product } from '../../../models/product';
 @Component({
   selector: 'app-product',
   templateUrl: './product.component.html',
@@ -7,6 +7,6 @@ import { product } from 'src/app/models/product';
 })
 export class ProductComponent {
   @Input()
-  product : product;
+  product : Product;
 
 }
